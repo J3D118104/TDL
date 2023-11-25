@@ -4,106 +4,194 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login"
+    tools:context=".Tambahtugas"
     android:background="#000080"
     >
-    <ImageView
-        android:layout_width="200dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="120dp"
-        android:id="@+id/logo1"
-        android:background="@drawable/logo1"
-        />
     <LinearLayout
-        android:layout_width="350dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/lnback">
+        <ImageView
+            android:id="@+id/back1"
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/back" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Add Your Task"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="10dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/lnt1"
+        android:layout_below="@+id/lnback"
+        android:layout_margin="20dp"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Task tittle *"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+            <EditText
+                android:id="@+id/title_task"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="Title"
+                android:inputType="text"
+                android:background="@color/white"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="Task description *"
+                android:textColor="@color/white"/>
+            <EditText
+                android:id="@+id/task_description"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:hint="Title"
+                android:inputType="text"
+                android:background="@color/white"/>
+        </LinearLayout>
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/logo2"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:id="@+id/mainllogin"
-        android:layout_below="@+id/logo1"
-        android:layout_marginTop="150dp"
-        android:background="@color/white"
-        android:layout_marginLeft="30dp"
+        android:id="@+id/lnt2"
+        android:layout_below="@+id/lnt1"
+        android:layout_margin="20dp"
         >
-
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="10dp"
-            android:text="Register"
-            android:textSize="40dp" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Silahkan isi form ini untuk melakukan registrasi."
             android:textSize="20dp"
-            android:layout_margin="30dp"/>
-        <EditText
-            android:id="@+id/nama"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="24dp"
-            android:hint="@string/nama"
-            android:inputType="textEmailAddress" />
-
-        <EditText
-            android:id="@+id/password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="24dp"
-            android:hint="@string/nohp"
-            android:imeActionLabel="@string/action_sign_in_short"
-            android:imeOptions="actionDone"
-            android:inputType="textPassword"
-            />
-        <EditText
-            android:id="@+id/username"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="24dp"
-            android:hint="@string/prompt_email"
-            android:inputType="textEmailAddress" />
-
-        <EditText
-            android:id="@+id/password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="24dp"
-            android:hint="@string/prompt_password"
-            android:imeActionLabel="@string/action_sign_in_short"
-            android:imeOptions="actionDone"
-            android:inputType="textPassword"
-            />
-
-        <Button
-            android:layout_width="140dp"
-            android:layout_height="70dp"
-            android:text="Register"
+            android:text="Add task list *"
             android:textStyle="bold"
-            android:backgroundTint="#000080"
-            android:id="@+id/register"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="95dp"
-            />
-        <TextView
-            android:layout_width="match_parent"
+            android:textColor="@color/white"/>
+        <EditText
+            android:id="@+id/task_list"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="Belum Punya Akun ? "
+            android:hint="Task list"
+            android:inputType="text"
+            android:background="@color/white"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:textSize="20dp"
-            android:layout_margin="10dp"/>
+            android:text="Set deadline*"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="Date"
+            android:textColor="@color/white"/>
+        <EditText
+            android:id="@+id/task_date"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Task date"
+            android:inputType="date"
+            android:background="@color/white"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="Time"
+            android:textColor="@color/white"/>
+        <EditText
+            android:id="@+id/task_Time"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Task time"
+            android:inputType="time"
+            android:background="@color/white"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Level of priority"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+            <RadioButton
+                android:id="@+id/radioButton1"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Low" />
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Midlle"
+                android:textColor="@color/white"/>
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="High"
+                android:textColor="@color/white"/>
 
-
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Note (optional)"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+        <EditText
+            android:id="@+id/task_note"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:hint="Task note"
+            android:inputType="text"
+            android:background="@color/white"/>
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="80dp"
+            android:text="Tambah"
+            android:textSize="22dp"
+            android:backgroundTint="#05FF2D"/>
     </LinearLayout>
-
-
 </RelativeLayout>
