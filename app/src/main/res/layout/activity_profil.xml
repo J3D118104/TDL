@@ -11,8 +11,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:id="@+id/lnbackp">
-        <ImageView
-            android:id="@+id/back1"
+        <ImageButton
+            android:id="@+id/back2"
             android:layout_width="35dp"
             android:layout_height="30dp"
             android:layout_marginLeft="20dp"
